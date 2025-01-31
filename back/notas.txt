@@ -1,0 +1,22 @@
+Instalar express y npm: npm install express sequelize mysql2 
+
+sequelize auto: genera automaticamente los modelos, a partir de las tablas de la base de datos. Es es el comando para Instalarlo: npm install -g sequelize-auto
+
+Este es el comando para generar el modelo: equelize-auto -h localhost -d fifa_db -u root -x tu_contraseña -p 3306 --dialect mysql -o ./models -t players
+
+-h: Host de la base de datos.
+
+-d: Nombre de la base de datos (fifa_db).
+
+-u: Usuario de la base de datos (root).
+
+-x: Contraseña del usuario.
+
+-p: Puerto de la base de datos (por defecto, 3306 para MySQL).
+
+--dialect: Tipo de base de datos (mysql, postgres, sqlite, etc.).
+
+-o: Directorio de salida donde se guardarán los modelos generados (./models).
+
+-t: Nombre de la tabla para la cual generar el modelo (players).
+
