@@ -1,4 +1,4 @@
-const sequelize = require('../config'); // Importar la instancia de Sequelize
+const sequelize = require('../config'); 
 const { DataTypes } = require('sequelize');
 
 const Player = sequelize.define('players', {
