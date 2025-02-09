@@ -1,0 +1,10 @@
+<div *ngIf="jugador" class="p-6 bg-gray-100 rounded-lg shadow-md">
+    <h2 class="text-xl font-bold">{{ jugador.long_name }}</h2>
+    <img [src]="jugador.player_face_url" alt="Foto de {{ jugador.long_name }}" class="w-32 h-32 my-4">
+    <p><strong>Equipo:</strong> {{ jugador.club_name }}</p>
+    <p><strong>Nacionalidad:</strong> {{ jugador.nationality_name }}</p>
+    <p><strong>Media:</strong> {{ jugador.overall }}</p>
+    <p><strong>Edad:</strong> {{ jugador.age }}</p>
+    <p><strong>Altura:</strong> {{ jugador.height_cm }} cm</p>
+    <p><strong>Peso:</strong> {{ jugador.weight_kg }} kg</p>
+  </div>

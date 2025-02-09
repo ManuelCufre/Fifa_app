@@ -1,0 +1,46 @@
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  
+  <main>
+    <div class="contenedor">
+      <table class="table table-dark table-striped">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Equipo</th>
+            <th>Media</th>
+            <th>Nacionalidad</th>
+            <th>Edad</th>
+            <th>Estatura</th>
+            <th>Peso</th>
+  
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let jugador of primerosJugadores"> 
+            <td class="jugador">{{ jugador.id }}</td>
+            <td><a [routerLink]="['/jugador', jugador.id]" class="text-blue-500 underline">{{ jugador.long_name }}</a></td>
+            <td class="jugador">{{ jugador.club_name }}</td>
+            <td class="jugador">{{ jugador.overall }}</td>
+            <td class="jugador">{{ jugador.nationality_name }}</td>
+            <td class="jugador">{{ jugador.age }}</td>
+            <td class="jugador">{{ jugador.height_cm }}</td>
+            <td class="jugador">{{ jugador.weight_kg }}</td>
+          </tr>
+          <hr>
+        </tbody>
+      </table>
+    </div>
+    <div class="botones-reportes">
+      <button (click)="exportToExcel()" class="btn btn-success">Descargar Excel</button>
+      
+    </div>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+</body>
+
+

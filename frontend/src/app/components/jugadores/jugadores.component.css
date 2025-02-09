@@ -1,0 +1,22 @@
+main{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    align-items: center;
+    background-color: rgb(41, 41, 41);
+}
+
+.contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+}
+.jugador {
+    font-size: 0.8rem;
+}
+
+.botones-reportes {
+    display: flex;
+    justify-content: center;    
+}

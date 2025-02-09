@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+header{
+    background-color: rgb(30, 31, 37);
+    color: #fff;
+    padding: 1rem;
+    font-size: 1rem;
+}
+
+h1{
+    font-size: 1rem;
+}
