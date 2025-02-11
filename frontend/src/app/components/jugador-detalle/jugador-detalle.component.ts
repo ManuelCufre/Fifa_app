@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-jugador-detalle',
+  standalone: true,
   imports: [CommonModule, RouterModule],
   templateUrl: './jugador-detalle.component.html',
   styleUrl: './jugador-detalle.component.css'

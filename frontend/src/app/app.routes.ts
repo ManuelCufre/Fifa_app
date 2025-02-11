@@ -6,3 +6,4 @@ export const routes: Routes = [
   { path: '', component: JugadoresComponent },
   { path: 'jugador/:id', component: JugadorDetalleComponent }, 
 ];
+

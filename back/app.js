@@ -1,6 +1,7 @@
 const express = require('express');
 const sequelize = require('./config'); 
 const playerRoutes = require('./routes/players'); 
+const path = require('path');
 
 const app = express();
 const port = 3000;
@@ -31,7 +32,12 @@ sequelize.sync()
 
 app.use('/api/players', playerRoutes);
 
+const angularAppPath = path.join(__dirname, 'dist', 'frontend'); 
+app.use(express.static(angularAppPath));
 
+app.get('*', (req, res) => {
+  res.sendFile(path.join(angularAppPath, 'index.html'));
+});
 
 app.listen(port, () => {
   console.log(`Servidor corriendo en http://localhost:${port}`);
