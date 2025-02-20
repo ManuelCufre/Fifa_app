@@ -30,7 +30,7 @@ export class JugadoresComponent implements OnInit {
     const workbook: XLSX.WorkBook = { Sheets: { 'Datos': worksheet }, SheetNames: ['Datos'] };
     const excelBuffer: any = XLSX.write(workbook, { bookType: 'xlsx', type: 'array' });
 
-    this.saveAsExcelFile(excelBuffer, 'mi_archivo');
+    this.saveAsExcelFile(excelBuffer, 'Lista jugadores');
   }
   
   private saveAsExcelFile(buffer: any, fileName: string): void {
